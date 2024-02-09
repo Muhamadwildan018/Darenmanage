@@ -6,7 +6,7 @@ class Config(object):
 
     API_ID = "22016511" 
     API_HASH = "8267335b1cbd700a179dbe9a9a482d1e"
-    TOKEN = "6851855443:AAEqPl3Jz3LTf92kBvf4L-HvkYmfS26W7i4"  
+    TOKEN ="6851855443:AAFmoWl1ZN76tqVfDIagwKclt0zJ4Dh-mOc"  
     OWNER_ID = 6675703731
     
     SUPPORT_CHAT = "the_support_chat"  # Your own group for support, do not add the @
