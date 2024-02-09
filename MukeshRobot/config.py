@@ -14,7 +14,7 @@ class Config(object):
     EVENT_LOGS = ()  # Prints information like gbans, sudo promotes, AI enabled disable states that may help in debugging and shit
     MONGO_DB_URI= "mongodb+srv://saftpgt170:fePHBBhN9pB2lKnj@cluster0.7tdp3qi.mongodb.net/?retryWrites=true&w=majority"
     # RECOMMENDED
-    DATABASE_URL="postgres://nfdksjkc:tF9g9bJkfc4bkQN9tIgzYfX1X-lc0cB6@lucky.db.elephantsql.com/nfdksjkc" 
+    DATABASE_URL="postgres://qqntnqbs:yb106jvzb8f5IExpO58H7uC0HXFroIF5@lucky.db.elephantsql.com/qqntnqbs" 
     CASH_API_KEY = (
         "ONZ1SLDG89PVVMR7"  
     )
