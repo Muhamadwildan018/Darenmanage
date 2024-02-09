@@ -4,10 +4,10 @@ class Config(object):
     # REQUIRED
     # Login to https://my.telegram.org and fill in these slots with the details given by it
 
-    API_ID = "" # integer value, dont use ""
-    API_HASH = ""
+    API_ID = "22016511" 
+    API_HASH = "8267335b1cbd700a179dbe9a9a482d1e"
     TOKEN = "6851855443:AAEqPl3Jz3LTf92kBvf4L-HvkYmfS26W7i4"  
-    OWNER_ID = 2145093972 #
+    OWNER_ID = 6675703731
     
     SUPPORT_CHAT = "the_support_chat"  # Your own group for support, do not add the @
     START_IMG = ""
