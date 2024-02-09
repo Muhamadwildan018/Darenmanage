@@ -10,7 +10,7 @@ class Config(object):
     OWNER_ID = 6675703731
     
     SUPPORT_CHAT = "the_support_chat"  # Your own group for support, do not add the @
-    START_IMG = ""
+    START_IMG = "https://telegra.ph//file/0ec1fb2c5769d3a062829.jpg"
     EVENT_LOGS = ()  # Prints information like gbans, sudo promotes, AI enabled disable states that may help in debugging and shit
     MONGO_DB_URI= "mongodb+srv://saftpgt170:fePHBBhN9pB2lKnj@cluster0.7tdp3qi.mongodb.net/?retryWrites=true&w=majority"
     # RECOMMENDED
