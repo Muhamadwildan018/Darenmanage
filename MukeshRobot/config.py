@@ -6,7 +6,7 @@ class Config(object):
 
     API_ID = "22016511" 
     API_HASH = "8267335b1cbd700a179dbe9a9a482d1e"
-    TOKEN ="6851855443:AAFmoWl1ZN76tqVfDIagwKclt0zJ4Dh-mOc"  
+    TOKEN ="6851855443:AAGeVwjbWYnmF6Jp5PujNV03L7XL3FocmNQ"  
     OWNER_ID = 6675703731
     
     SUPPORT_CHAT = "dareensupport"  # Your own group for support, do not add the @
@@ -14,7 +14,7 @@ class Config(object):
     EVENT_LOGS = ()  # Prints information like gbans, sudo promotes, AI enabled disable states that may help in debugging and shit
     MONGO_DB_URI= "mongodb+srv://saftpgt170:fePHBBhN9pB2lKnj@cluster0.7tdp3qi.mongodb.net/?retryWrites=true&w=majority"
     # RECOMMENDED
-    DATABASE_URL="postgres://qqntnqbs:yb106jvzb8f5IExpO58H7uC0HXFroIF5@lucky.db.elephantsql.com/qqntnqbs" 
+    DATABASE_URL="postgres://auvaxviv:WWgm5QxolPPHJj6FRlgJ0YUo6Sry6ZoX@lucky.db.elephantsql.com/auvaxviv" 
     CASH_API_KEY = (
         "ONZ1SLDG89PVVMR7"  
     )
