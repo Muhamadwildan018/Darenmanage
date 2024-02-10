@@ -31,7 +31,7 @@ async def mentionall(event):
         ):
             is_admin = True
     if not is_admin:
-        return await event.respond("__Only admins can mention all!__")
+        return await event.respond("__INI MODUL CUMAN UNTUK ADMIN KONTOL!__")
 
     if event.pattern_match.group(1) and event.is_reply:
         return await event.respond("__Give me one argument!__")
@@ -47,7 +47,7 @@ async def mentionall(event):
             )
     else:
         return await event.respond(
-            "__Reply to a message or give me some text to mention others!__"
+            "__MANA PESANNYA? JANGAN TOLOL NGAPA!__"
         )
 
     spam_chats.append(chat_id)
