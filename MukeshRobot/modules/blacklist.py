@@ -74,49 +74,61 @@ def add_blacklist(update, context):
     chat = update.effective_chat
     user = update.effective_user
     words = msg.text.split(None, 1)
+    pesan = update.message.reply_to_message
 
-    conn = connected(context.bot, update, chat, user.id)
-    if conn:
+    if conn := connected(context.bot, update, chat, user.id):
         chat_id = conn
         chat_name = dispatcher.bot.getChat(conn).title
     else:
         chat_id = update.effective_chat.id
         if chat.type == "private":
             return
-        else:
-            chat_name = chat.title
+        chat_name = chat.title
 
-    if len(words) > 1:
-        text = words[1]
-        to_blacklist = list(
-            {trigger.strip() for trigger in text.split("\n") if trigger.strip()}
-        )
-        for trigger in to_blacklist:
-            sql.add_to_blacklist(chat_id, trigger.lower())
-
-        if len(to_blacklist) == 1:
-            send_message(
-                update.effective_message,
-                "Berhasil menambahkan <code>{}</code> in chat: <b>{}</b>!".format(
-                    html.escape(to_blacklist[0]), html.escape(chat_name)
-                ),
-                parse_mode=ParseMode.HTML,
+    try:
+        if len(words) > 1:
+            text = words[1]
+            to_blacklist = list(
+                {trigger.strip() for trigger in text.split("\n") if trigger.strip()}
             )
 
+            for trigger in to_blacklist:
+                sql.add_to_blacklist(chat_id, trigger.lower())
+
+            if len(to_blacklist) == 1:
+                send_message(
+                    msg,
+                    f"Added blacklist <code>{html.escape(to_blacklist[0])}</code> in chat: <b>{chat_name}</b>!",
+                    parse_mode=ParseMode.HTML,
+                )
+
+            else:
+                send_message(
+                    msg,
+                    f"Added blacklist trigger: <code>{len(to_blacklist)}</code> in <b>{chat_name}</b>!",
+                    parse_mode=ParseMode.HTML,
+                )
+
         else:
-            send_message(
-                update.effective_message,
-                "Added blacklist trigger: <code>{}</code> in <b>{}</b>!".format(
-                    len(to_blacklist), html.escape(chat_name)
-                ),
-                parse_mode=ParseMode.HTML,
+            text = pesan.text
+            to_blacklist = list(
+                {trigger.strip() for trigger in text.split("\n") if trigger.strip()}
             )
 
-    else:
-        send_message(
-            update.effective_message,
-            "MANA KATA KATA NYA MEMEK.",
-        )
+            for trigger in to_blacklist:
+                sql.add_to_blacklist(chat_id, trigger.lower())
+
+            if len(to_blacklist) == 1:
+                send_message(
+                    msg,
+                    f"Berhasil Menambahkan <code>{html.escape(to_blacklist[0])}</code> in chat: <b>{chat_name}</b>!",
+                    parse_mode=ParseMode.HTML,
+                )
+    except:
+          send_message(
+              msg,
+              "Mana Kata Kata Yang Mau Di Blacklist Anjeengg"
+          ) 
 
 
 @user_admin
@@ -455,8 +467,9 @@ Bʟᴀᴄᴋʟɪsᴛs ᴀʀᴇ ᴜsᴇᴅ ᴛᴏ sᴛᴏᴘ ᴄᴇʀᴛᴀɪɴ �
  ❍ /blacklist*:* Vɪᴇᴡ ᴛʜᴇ ᴄᴜʀʀᴇɴᴛ ʙʟᴀᴄᴋʟɪsᴛᴇᴅ ᴡᴏʀᴅs.
 
 Aᴅᴍɪɴ Oɴʟʏ:
- ❍ /bl <triggers>*:* ᴀᴅᴅ ᴀ ᴛʀɪɢɢᴇʀ ᴛᴏ ᴛʜᴇ ʙʟᴀᴄᴋʟɪsᴛ. ᴇᴀᴄʜ ʟɪɴᴇ ɪs ᴄᴏɴsɪᴅᴇʀᴇᴅ ᴏɴᴇ ᴛʀɪɢɢᴇʀ, sᴏ ᴜsɪɴɢ ᴅɪғғᴇʀᴇɴᴛ ʟɪɴᴇs ᴡɪʟʟ ᴀʟʟᴏᴡ ʏᴏᴜ ᴛᴏ ᴀᴅᴅ ᴍᴜʟᴛɪᴘʟᴇ ᴛʀɪɢɢᴇʀs.
- ❍ /unbl <triggers>*:* ʀᴇᴍᴏᴠᴇ ᴛʀɪɢɢᴇʀs ғʀᴏᴍ ᴛʜᴇ ʙʟᴀᴄᴋʟɪsᴛ. sᴀᴍᴇ ɴᴇᴡʟɪɴᴇ ʟᴏɢɪᴄ ᴀᴘᴘʟɪᴇs ʜᴇʀᴇ, sᴏ ʏᴏᴜ ᴄᴀɴ ʀᴇᴍᴏᴠᴇ ᴍᴜʟᴛɪᴘʟᴇ ᴛʀɪɢɢᴇʀs ᴀᴛ ᴏɴᴄᴇ.
+ × /bl `<reply message>` or `<triggers>`: Add a trigger to the blacklist. Each line is considered one trigger, \
+so using different lines will allow you to add multiple triggers.
+ ❍ /unblacklist <triggers>*:* ʀᴇᴍᴏᴠᴇ ᴛʀɪɢɢᴇʀs ғʀᴏᴍ ᴛʜᴇ ʙʟᴀᴄᴋʟɪsᴛ. sᴀᴍᴇ ɴᴇᴡʟɪɴᴇ ʟᴏɢɪᴄ ᴀᴘᴘʟɪᴇs ʜᴇʀᴇ, sᴏ ʏᴏᴜ ᴄᴀɴ ʀᴇᴍᴏᴠᴇ ᴍᴜʟᴛɪᴘʟᴇ ᴛʀɪɢɢᴇʀs ᴀᴛ ᴏɴᴄᴇ.
  ❍ /blacklistmode <off/del/warn/ban/kick/mute/tban/tmute>*:* ᴀᴄᴛɪᴏɴ ᴛᴏ ᴘᴇʀғᴏʀᴍ ᴡʜᴇɴ sᴏᴍᴇᴏɴᴇ sᴇɴᴅs ʙʟᴀᴄᴋʟɪsᴛᴇᴅ ᴡᴏʀᴅs.
 """
 
@@ -464,7 +477,7 @@ BLACKLIST_HANDLER = DisableAbleCommandHandler(
     "blacklist", blacklist, pass_args=True, admin_ok=True, run_async=True
 )
 ADD_BLACKLIST_HANDLER = CommandHandler("bl", add_blacklist, run_async=True)
-UNBLACKLIST_HANDLER = CommandHandler("unbl", unblacklist, run_async=True)
+UNBLACKLIST_HANDLER = CommandHandler("unblacklist", unblacklist, run_async=True)
 BLACKLISTMODE_HANDLER = CommandHandler(
     "blacklistmode", blacklist_mode, pass_args=True, run_async=True
 )
