@@ -73,7 +73,7 @@ def get_readable_time(seconds: int) -> str:
 
 PM_START_TEXT = """
 *ᴡᴏʏ {} !*
-✪ ɢᴜᴀ ᴅᴀʀᴇᴇɴ ᴍᴀɴᴀɢᴇᴍᴇɴ ʙᴏᴛ [🤖](https://telegra.ph//file/8b6b2f43b78a6354d2420.jpg)
+✪ ɢᴜᴀ ᴅᴀʀᴇᴇɴ ᴍᴀɴᴀɢᴇᴍᴇɴ ʙᴏᴛ [🤖](https://telegra.ph//file/018dafd42dd8db92dfb7e.jpg)
 ────────────────────────
 ◈ *ᴜᴘᴛɪᴍᴇ:* `{}`
 ◈ `{}` *ᴘᴇɴɢɢᴜɴᴀ, ᴅɪ * `{}` *ɢʀᴏᴜᴘ*
@@ -111,10 +111,10 @@ buttons = [
 HELP_STRINGS = """
 Klik tombol di bawah ini untuk mendapatkan deskripsi tentang perintah spesifik."""
 
-Key_IMG = "https://telegra.ph//file/8b6b2f43b78a6354d2420.jpg"
+Key_IMG = "https://telegra.ph//file/018dafd42dd8db92dfb7e.jpg"
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
- You can support the project by contacting @uneedsaha \
+ You can support the project by contacting @darenrorr \
  Supporting isnt always financial! \
  Those who cannot provide monetary support are welcome to help us develop the bot at ."""
 
