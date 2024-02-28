@@ -488,8 +488,12 @@ def Key_about_callback(update, context):
         )
     elif query.data == "Key_own":
         query.message.edit_text(
-            text="👨‍💻 Untuk yang ingin berdonasi sebagai ucapan terimakasih kepada Pembuat ᴅᴀʀᴇᴇɴ ✘ ʀᴏʙᴏᴛ,"
-            "\n\n • Silahkan Hubungi Owner atau klik dibawah ini",
+            text="**❏  👨‍💻 Uɴᴛᴜᴋ ʏᴀɴɢ ɪɴɢɪɴ ʙᴇʀᴅᴏɴᴀsɪ sᴇʙᴀɢᴀɪ ᴜᴄᴀᴘᴀɴ
+╰ ᴛᴇʀɪᴍᴀᴋᴀsɪʜ ᴋᴇᴘᴀᴅᴀ Pᴇᴍʙᴜᴀᴛ ᴅᴀʀᴇᴇɴ ✘ ʀᴏʙᴏᴛ.
+
+
+❏ ᴋᴀᴍᴜ ʙɪsᴀ ᴅᴏɴᴀsɪ ᴠɪᴀ ᴅᴀɴᴀ 081366697938
+╰ ᴀᴛᴀᴜ ʜᴜʙᴜɴɢɪ ᴏᴡɴᴇʀ ᴅᴀʀɪ ᴅᴀʀᴇᴇɴ ✘ ʀᴏʙᴏᴛ.**"
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
                 [
@@ -798,7 +802,7 @@ def main():
         try:
             dispatcher.bot.sendMessage(
                 f"@{SUPPORT_CHAT}", 
-                "**ʜᴀʟʟᴏ ᴄʟᴇɢʏɴ ꭙ ʀᴏʙᴏᴛ ʜɪᴅᴜᴘ ᴋᴇᴍʙᴀʟɪ.**",
+                "**ᴡᴏʏ ᴋᴏɴᴛᴏʟ ᴅᴀʀᴇᴇɴ ✘ ʀᴏʙᴏᴛ ᴜᴅᴀʜ ʜɪᴅᴜᴘ ʟᴀɢɪ ɴɪ ɴɢᴇɴᴛᴏᴅ**",
                 parse_mode=ParseMode.MARKDOWN
             )
         except Unauthorized:
