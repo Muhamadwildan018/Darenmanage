@@ -490,7 +490,8 @@ def Key_about_callback(update, context):
         query.message.edit_text(
             text="**❏  👨‍💻 Uɴᴛᴜᴋ ʏᴀɴɢ ɪɴɢɪɴ ʙᴇʀᴅᴏɴᴀsɪ sᴇʙᴀɢᴀɪ ᴜᴄᴀᴘᴀɴ**"
 "**╰ ᴛᴇʀɪᴍᴀᴋᴀsɪʜ ᴋᴇᴘᴀᴅᴀ Pᴇᴍʙᴜᴀᴛ ᴅᴀʀᴇᴇɴ ✘ ʀᴏʙᴏᴛ**".
-"/n/n**❏ ᴋᴀᴍᴜ ʙɪsᴀ ᴅᴏɴᴀsɪ ᴠɪᴀ ᴅᴀɴᴀ 081366697938
+
+"**❏ ᴋᴀᴍᴜ ʙɪsᴀ ᴅᴏɴᴀsɪ ᴠɪᴀ ᴅᴀɴᴀ 081366697938
 "**╰ ᴀᴛᴀᴜ ʜᴜʙᴜɴɢɪ ᴏᴡɴᴇʀ ᴅᴀʀɪ ᴅᴀʀᴇᴇɴ ✘ ʀᴏʙᴏᴛ.**"
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
