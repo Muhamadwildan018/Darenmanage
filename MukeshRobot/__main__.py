@@ -437,7 +437,7 @@ def Key_about_callback(update, context):
         )
     elif query.data == "Key_support":
         query.message.edit_text(
-            text="*📝 Bantuan Perintah Cleo*"
+            text="*📝 Bantuan Perintah Dareen*"
             "\npilih tombol dibawah untuk melihat bantuan perintah Cleo.",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
@@ -490,8 +490,7 @@ def Key_about_callback(update, context):
         query.message.edit_text(
             text="**❏  👨‍💻 Uɴᴛᴜᴋ ʏᴀɴɢ ɪɴɢɪɴ ʙᴇʀᴅᴏɴᴀsɪ sᴇʙᴀɢᴀɪ ᴜᴄᴀᴘᴀɴ
 ╰ ᴛᴇʀɪᴍᴀᴋᴀsɪʜ ᴋᴇᴘᴀᴅᴀ Pᴇᴍʙᴜᴀᴛ ᴅᴀʀᴇᴇɴ ✘ ʀᴏʙᴏᴛ**".
-
-"**❏ ᴋᴀᴍᴜ ʙɪsᴀ ᴅᴏɴᴀsɪ ᴠɪᴀ ᴅᴀɴᴀ 081366697938
+"/n/n**❏ ᴋᴀᴍᴜ ʙɪsᴀ ᴅᴏɴᴀsɪ ᴠɪᴀ ᴅᴀɴᴀ 081366697938
 ╰ ᴀᴛᴀᴜ ʜᴜʙᴜɴɢɪ ᴏᴡɴᴇʀ ᴅᴀʀɪ ᴅᴀʀᴇᴇɴ ✘ ʀᴏʙᴏᴛ.**"
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
