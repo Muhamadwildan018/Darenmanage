@@ -357,7 +357,7 @@ def Key_about_callback(update, context):
     if query.data == "Key_":
         query.message.edit_text(
             text="🎧 Bantuan Perintah Music."
-            "\npilih menu di bawah ini untuk melihat bantuan Music ᴄʟᴇɢʏɴ ",
+            "\npilih menu di bawah ini untuk melihat bantuan Music ᴅᴀʀᴇᴇɴ ",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -438,7 +438,7 @@ def Key_about_callback(update, context):
     elif query.data == "Key_support":
         query.message.edit_text(
             text="*📝 Bantuan Perintah Dareen*"
-            "\npilih tombol dibawah untuk melihat bantuan perintah Cleo.",
+            "\npilih tombol dibawah untuk melihat bantuan perintah Dareen.",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
                 [
@@ -748,9 +748,9 @@ def donate(update: Update, context: CallbackContext):
             DONATE_STRING, parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True
         )
 
-        if OWNER_ID != 5063062493:
+        if OWNER_ID != 1623431940:
             update.effective_message.reply_text(
-                f"I'm free for everyone ❤️ If you wanna make me smile, just join[@ClegynStore]({DONATION_LINK})",
+                f"I'm free for everyone ❤️ If you wanna make me smile, just join[@cehadaren]({DONATION_LINK})",
                 parse_mode=ParseMode.MARKDOWN,
             )
     else:
