@@ -10,14 +10,26 @@
     ],   
  "repository": "https://github.com/Noob-Mukesh/MukeshRobot",
  "stack": "heroku-22",
-    "addons": [
+ "addons": [
     {
-       "options": {
-          "version": "15"
-       },
-       "plan": "heroku-postgresql"
+      "plan": "heroku-postgresql"
     }
- ],
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    },
+    {
+      "url": "https://github.com/interconnectit/heroku-buildpack-ffmpeg"
+    }
+  ],
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "basic"
+    }
+  }
+}
  "env": {
     "API_ID": {
        "description": "Get this value from my.telegram.org/apps.",
