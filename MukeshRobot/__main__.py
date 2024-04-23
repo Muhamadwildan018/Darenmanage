@@ -71,43 +71,6 @@ def get_readable_time(seconds: int) -> str:
     return ping_time
 
 
-PM_START_TEXT = """
-*ᴡᴏʏ {} !*
-✪ ɢᴜᴀ ᴅᴀʀᴇᴇɴ ᴍᴀɴᴀɢᴇᴍᴇɴ ʙᴏᴛ [🤖](https://telegra.ph//file/018dafd42dd8db92dfb7e.jpg)
-────────────────────────
-◈ *ᴜᴘᴛɪᴍᴇ:* `{}`
-◈ `{}` *ᴘᴇɴɢɢᴜɴᴀ, ᴅɪ * `{}` *ɢʀᴏᴜᴘ*
-────────────────────────
-⬝ ᴛᴇᴋᴀɴ /help ᴜɴᴛᴜᴋ ʙᴀɴᴛᴜᴀɴ
-"""
-
-buttons = [
-        [
-        InlineKeyboardButton(
-            text="➕️ ᴛᴀᴍʙᴀʜᴋᴀɴ sᴀʏᴀ ᴋᴇ ɢʀᴏᴜᴘ ➕️", url=f"https://t.me/{dispatcher.bot.username}?startgroup=true"
-        ),
-    ],
-    [
-        InlineKeyboardButton(text="sᴜᴘᴘᴏʀᴛ", url="t.me/Darensupport"
-        ),
-        InlineKeyboardButton(text="ᴄʜᴀɴɴᴇʟ", url="t.me/cehadaren"
-        ),
-    ],
-    [
-        InlineKeyboardButton(
-            text="ᴏᴡɴᴇʀ", url="t.me/Darenrorr"
-        ),
-    ],
-    [
-        InlineKeyboardButton(text="🗒️ʙᴀɴᴛᴜᴀɴ", callback_data="Key_support"
-       ),
-        InlineKeyboardButton(
-            text="ᴅᴏɴᴀsɪ", callback_data="Key_own"
-       ),
-    ],
-]
-
-
 HELP_STRINGS = """
 Klik tombol di bawah ini untuk mendapatkan deskripsi tentang perintah spesifik."""
 
